@@ -1,5 +1,7 @@
 # rag_reports
-RAG application designed to query financial report PDFs
+RAG application designed to query financial report PDFs.
+
+**Requires an OPENAI_API_KEY to be set up in a .env file**
 
 
 # Initializing
