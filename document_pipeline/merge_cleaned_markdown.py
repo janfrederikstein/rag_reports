@@ -14,7 +14,7 @@ def sort_files_by_page_number(files):
     
     return sorted(files, key=get_page_number)
 
-def stitch_markdown_subfolders(
+def merge_markdown_subfolders(
     input_base_dir="pdfs/cleaned_markdown_output",
     output_base_dir="pdfs/merged_clean_markdown",
 ):
@@ -58,5 +58,5 @@ def stitch_markdown_subfolders(
         print(f"Created {output_md_file} from {subfolder.name} subfolder.")
 
 if __name__ == "__main__":
-    stitch_markdown_subfolders()
+    merge_markdown_subfolders()
     print("All subfolders stitched into per-document markdown files.")
