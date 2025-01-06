@@ -2,6 +2,8 @@
 pdfs/attention.pdf
 pdfs/spotify_2024_Q3_report.pdf
 
+.DS_Store
+
 # some test files
 pdf_to_png.ipynb
 langchain_multimodal.ipynb
