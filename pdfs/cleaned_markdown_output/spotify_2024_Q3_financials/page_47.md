@@ -4,8 +4,7 @@ Pursuant to the requirements of the Securities Exchange Act of 1934, the registr
 
 **Spotify Technology S.A.**
 
-Date: November 12, 2024
-
+Date: November 12, 2024  
 By: /s/ Christian Luiga  
 Name: Christian Luiga  
-Title: Chief Financial Officer  
+Title: Chief Financial Officer

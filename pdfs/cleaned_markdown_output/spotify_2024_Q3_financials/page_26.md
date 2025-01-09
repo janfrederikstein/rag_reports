@@ -1,19 +1,20 @@
 ## Long term investments - other
 
-The Group has interests in certain long term investments, the most significant of which is our equity investment in DistroKid, an independent digital music distribution service. These long term investments primarily represent unlisted equity securities carried at fair value through other comprehensive income/(loss). The fair values of these equity investments are generally determined using business enterprises valued on market transactions or by (i) applying market multiples to the projected financial performance and (ii) discounting the future value to its present base equivalent. The key assumptions used to estimate the fair value of these equity investments include market multiples of revenue or earnings before interest, income taxes, depreciation and amortization for benchmark companies used to estimate business enterprise value and discount rate.
+The Group has interests in certain long term investments, the most significant of which is our equity investment in DistroKid, an independent digital music distribution service. These long term investments primarily represent unlisted equity securities carried at fair value through other comprehensive income/(loss). The fair values of these equity investments are generally determined using business enterprises valued on market transactions or by applying market multiples to the projected financial performance and discounting the future value to its present base equivalent. The key assumptions used to estimate the fair value of these equity investments include market multiples of revenue or earnings before interest, income taxes, depreciation and amortization for benchmark companies used to estimate business enterprise value and discount rate.
 
 The fair value of the long term investments may vary over time and is subject to a variety of risks including company performance, macroeconomic, regulatory, industry, USD to Euro exchange rate, and systemic risks of the overall equity markets.
 
 The table below presents the changes in the other long term investments:
 
-| At January 1 | 2024 | 2023 |
-|---------------|------|------|
-| Initial recognition of long term investment | 61 | 43 |
-| Changes in fair value recorded in other comprehensive (loss)/income | 1 | 3 |
-| Changes in fair value recognized in interim condensed consolidated statement of operations | 13 | – |
-| Return of capital | 2 | 3 |
-| Effect of changes in foreign exchange rates | (1) | 1 |
-| **At September 30** | **74** | **50** |
+|                          |2024 (in millions)|2023 (in millions)|
+|--------------------------|-----------------|------------------|
+|**At January 1**          |                 |                  |
+|Initial recognition of long term investment|61|43|
+|Changes in fair value recorded in other comprehensive (loss)/income|1|3|
+|Changes in fair value recognized in interim condensed consolidated statement of operations|13|—|
+|Return of capital|2|3|
+|Effect of changes in foreign exchange rates|(1)|1|
+|**At September 30**       |74|50|
 
 ## Warrants
 
@@ -23,8 +24,9 @@ As of September 30, 2024 there were no outstanding warrants and as of December 3
 
 The table below presents the changes in the warrants liability:
 
-| At January 1 | 2024 | 2023 |
-|----------------|------|------|
-| Changes in fair value recognized in interim condensed consolidated statement of operations | 3 | 1 |
-| Issuance of ordinary shares upon net settlement of warrants | 33 | 2 |
-| **At September 30** | **-36** | **3** |
+|                                       |2024 (in millions)|2023 (in millions)|
+|---------------------------------------|-----------------|------------------|
+|**At January 1**                       |                  |                  |
+|Changes in fair value recognized in interim condensed consolidated statement of operations|3|1|
+|Issuance of ordinary shares upon net settlement of warrants|33|2|
+|**At September 30**                    |36|3|

@@ -1,3 +1,5 @@
+import os
+from pathlib import Path
 from openai import OpenAI
 from dotenv import load_dotenv
 
@@ -6,8 +8,7 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(api_key=api_key)
-import os
-from pathlib import Path
+
 
 
 def clean_markdown_content(text):
