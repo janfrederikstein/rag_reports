@@ -1,16 +1,18 @@
 # rag_reports
 RAG application designed to query financial report PDFs.
+Requires an OPENAI_API_KEY to be set up in a .env file in the main repo
 
-**Requires an OPENAI_API_KEY to be set up in a .env file**
+---
 
+## Initializing
 
-# Initializing
+1. installing system level dependencies 
+    `%brew install poppler tesseract libmagic`
 
-#### activating venv
-source venv/bin/activate
+2. Install dependencies from requirements.txt 
+    `$ pip install -r requirements.txt`
 
-#### installing system level dependencies
-%brew install poppler tesseract libmagic
+3. Place documents intended for analysis in pdfs/input_dir
 
 
 ## Pre-processing PDFs
@@ -21,9 +23,9 @@ The document_pipeline package contains a full document extraction pipeline that:
 3. Cleans the markdown pages, using GPT-4o-mini
 4. Merges the files back together to one full Markdown version of the original document
 
-#### Running the pipeline
+### Running the pipeline
 run_doc_pipeline.py will sequentially execute this process. Note that it currently is not set up to avoid duplicates if the documents have already been processed earlier.
 
 
-### Running Streamlit app
-streamlit run <path>/streamlit_app.py
+## Running Streamlit app
+`streamlit run <path>/streamlit_app.py`

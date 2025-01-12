@@ -36,11 +36,3 @@ def convert_pdfs_to_png(input_dir: str, output_dir: str, dpi: int = 200):
             img.save(output_filename, "PNG")
         
         print(f"Finished converting {pdf_file}: output saved in {output_subdir}")
-
-
-
-if __name__ == "__main__":
-    input_dir_path = "pdfs/input_dir"
-    output_dir_path = "pdfs/output_dir"
-
-    convert_pdfs_to_png(input_dir_path, output_dir_path, dpi=200)
