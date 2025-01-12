@@ -26,7 +26,7 @@ def image_to_markdown(base64_image):
     }
 
     payload = {
-        "model": "gpt-4-turbo",  # Example model name
+        "model": "gpt-4-turbo",  # model name
         "messages": [{
             "role": "user",
             "content": [{
@@ -49,7 +49,7 @@ def image_to_markdown(base64_image):
         "max_tokens": 4096
     }
 
-    # Post the request to the Chat Completions endpoint
+    # posting the request to the chat completions endpoint
     response = requests.post(
         "https://api.openai.com/v1/chat/completions",
         headers=headers,
@@ -58,7 +58,7 @@ def image_to_markdown(base64_image):
 
     response_json = response.json()
 
-    # Error handling
+    # error handling
     if "choices" not in response_json:
         raise RuntimeError(f"API response error: {response_json}")
 
@@ -73,16 +73,15 @@ def process_images_recursive(
     converts each PNG to Markdown using the OpenAI vision model,
     and saves the output in matching subfolders in `markdown_output_dir`.
     """
-    # Make sure the top-level markdown output folder exists
+    # making sure the top-level markdown output folder exists
     os.makedirs(markdown_output_dir, exist_ok=True)
 
-    # Walk through each subfolder in `png_input_dir`
     input_path = Path(png_input_dir)
     if not input_path.exists():
         print(f"Input directory {input_path} does not exist.")
         return
 
-    # Example folder structure:
+    # example folder structure:
     # png_output/
     #   report_2020/
     #       page_1.png
@@ -91,30 +90,30 @@ def process_images_recursive(
     #       page_1.png
     #       ...
     #
-    # We'll mirror that structure in `markdown_output_dir`.
+    # mirroring that structure in markdown_output_dir
 
     for pdf_subfolder in sorted(input_path.iterdir()):
         # Skip if not a directory
         if not pdf_subfolder.is_dir():
             continue
 
-        # Create a corresponding subfolder in the markdown directory
+        # creating a corresponding subfolder in markdown directory
         output_subfolder = Path(markdown_output_dir) / pdf_subfolder.name
         os.makedirs(output_subfolder, exist_ok=True)
 
-        # Gather all .png files in this subfolder
+        # all .png files in subfolder
         png_files = sorted(pdf_subfolder.glob("*.png"))
 
         for png_file in png_files:
             print(f"Processing {png_file}...")
 
-            # Encode image to base64
+            # encoding image to base64
             encoded_img = encode_image_to_base64(png_file)
 
-            # Call the vision model to convert to markdown
+            # calling vision model to convert to markdown
             markdown_content = image_to_markdown(encoded_img)
 
-            # Create an output path for the markdown file
+            # creating output path for markdown file
             md_output_path = output_subfolder / f"{png_file.stem}.md"
             with open(md_output_path, "w") as f:
                 f.write(markdown_content)
@@ -122,7 +121,3 @@ def process_images_recursive(
             print(f"→ Saved {md_output_path}")
 
     print("All images converted to Markdown successfully!")
-
-if __name__ == "__main__":
-    # Example usage:
-    process_images_recursive()

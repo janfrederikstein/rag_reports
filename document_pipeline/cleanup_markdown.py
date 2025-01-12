@@ -98,6 +98,3 @@ def process_markdown_subfolders(
             print(f"→ Cleaned content saved to {cleaned_file_path}")
 
     print("All markdown files cleaned successfully!")
-
-if __name__ == "__main__":
-    process_markdown_subfolders()

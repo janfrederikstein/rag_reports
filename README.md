@@ -1,7 +1,6 @@
 # rag_reports
 RAG application designed to query financial report PDFs.
-
-> Requires an OPENAI_API_KEY to be set up in a .env file
+Requires an OPENAI_API_KEY to be set up in a .env file in the main repo
 
 ---
 
@@ -9,8 +8,10 @@ RAG application designed to query financial report PDFs.
 
 1. installing system level dependencies 
     `%brew install poppler tesseract libmagic`
+
 2. Install dependencies from requirements.txt 
     `$ pip install -r requirements.txt`
+
 3. Place documents intended for analysis in pdfs/input_dir
 
 

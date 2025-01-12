@@ -34,17 +34,17 @@ def merge_markdown_subfolders(
         if not subfolder.is_dir():
             continue
         
-        # e.g., subfolder might be "pdfs/cleaned_markdown_output/file_name"
+        # e.g. subfolder might be "pdfs/cleaned_markdown_output/file_name"
         md_files = list(subfolder.glob("*.md"))
         if not md_files:
-            # No .md files in this folder, skip
+            # no .md files in this folder, skip
             continue
         
-        # Sort by the numeric page_XX
+        # sorting by the numeric page_XX
         md_filenames = [f.name for f in md_files]
         sorted_files = sort_files_by_page_number(md_filenames)
         
-        # Create a single output .md file named after the folder, e.g. "file_name.md"
+        # creating a single output .md file named after the folder, e.g. "file_name.md"
         output_md_file = output_base_dir / f"{subfolder.name}.md"
         
         with open(output_md_file, 'w', encoding='utf-8') as outfile:
@@ -56,7 +56,3 @@ def merge_markdown_subfolders(
                 outfile.write(f"# Page {page_number}\n\n{content}\n\n")
         
         print(f"Created {output_md_file} from {subfolder.name} subfolder.")
-
-if __name__ == "__main__":
-    merge_markdown_subfolders()
-    print("All subfolders stitched into per-document markdown files.")
