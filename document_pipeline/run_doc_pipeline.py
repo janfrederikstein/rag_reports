@@ -1,10 +1,10 @@
 import os
 from pathlib import Path
 
-from document_pipeline.pdf_to_png_converter import convert_pdfs_to_png
-from document_pipeline.png_to_markdown import process_images_recursive
-from document_pipeline.cleanup_markdown import process_markdown_subfolders
-from document_pipeline.merge_cleaned_markdown import merge_markdown_subfolders
+from .pdf_to_png_converter import convert_pdfs_to_png
+from .png_to_markdown import process_images_recursive
+from .cleanup_markdown import process_markdown_subfolders
+from .merge_cleaned_markdown import merge_markdown_subfolders
 
 def run_document_pipeline(
     pdf_input_dir="pdfs/input_dir",
