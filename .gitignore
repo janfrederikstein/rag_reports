@@ -8,6 +8,8 @@ pdfs/spotify_2024_Q3_report.pdf
 pdf_to_png.ipynb
 langchain_multimodal.ipynb
 notes.md
+test.py
+chromadb_store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

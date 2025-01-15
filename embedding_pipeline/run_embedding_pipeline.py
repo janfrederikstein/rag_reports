@@ -19,7 +19,7 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s: %(message)s",
     handlers=[
         logging.FileHandler(log_file),
-        # logging.StreamHandler()
+        # logging.StreamHandler()       # uncomment to also log to console
     ]
 )
 
@@ -72,22 +72,21 @@ def run_embedding_pipeline(
     print(f"Using collection: '{collection.name}'.")
 
     for file in md_files:
-        print(f"\nProcessing {file.name}...")
+        doc_name = file.stem
+        print(f"\nProcessing {file.name} (doc name: '{doc_name}')...")
         with open(file, "r", encoding="utf-8") as f:
             md_text = f.read()
 
         # chunking by page
-        logging.info("Chunking markdown by page.")
+        logging.info(f"Chunking markdown by page for document '{doc_name}'.")
         page_chunks = chunk_markdown_by_page(md_text)
 
-        # embedding each page
         logging.info(f"Found {len(page_chunks)} page chunks in {file.name}.")
-        logging.info("Embedding each page.")
+        logging.info(f"Embedding pages for document '{doc_name}'.")
         embedded_pages = embed_pages(page_chunks, openai_api_key=openai_api_key)
 
-        # inserting embeddings into ChromaDB
-        logging.info("Inserting embeddings into ChromaDB.")
-        insert_into_chromadb(embedded_pages, collection)
+        logging.info(f"Inserting embeddings into ChromaDB for document '{doc_name}'.")
+        insert_into_chromadb(embedded_pages, collection, doc_name)
 
         logging.info(f"Finished embedding {len(embedded_pages)} pages from {file.name}.")
         print(f"Finished embedding {len(embedded_pages)} pages from {file.name}.")
